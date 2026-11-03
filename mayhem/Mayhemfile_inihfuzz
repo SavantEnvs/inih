@@ -1,0 +1,9 @@
+project: savantenvs/inih
+target: inihfuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/inihfuzz/testsuite
+cmds:
+  - cmd: /mayhem/inihfuzz
+    libfuzzer: true
+    timeout: 5

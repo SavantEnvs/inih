@@ -1,0 +1,9 @@
+project: savantenvs/inih
+target: inireader_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/inireader_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/inireader_fuzz
+    libfuzzer: true
+    timeout: 5
